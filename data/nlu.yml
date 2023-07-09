@@ -15,9 +15,6 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
-- intent: greet_sinhala
-  examples: |
-    - හෙලෝ
 - intent: goodbye
   examples: |
     - cu
@@ -36,12 +33,14 @@ nlu:
     - Thanks a lot
     - I appreciate it
     - Thanks for your help
+    - thanks
 - intent: ask_investment_advice
   examples: |
     - What are some good investment options?
     - Can you recommend some investments?
     - Where should I invest my money?
     - How can I grow my wealth?
+    - Can you provide some investment plans?
 - intent: ask_risk_tolerance
   examples: |
     - What is my risk tolerance?
@@ -83,3 +82,74 @@ nlu:
     - I want to order food
     - What is 2 + 2?
     - Who's the US President?
+- intent: greet_sn
+  examples: |
+    - කොහොමද
+    - ආයුබෝවන්
+    - ආයුබෝවන් ඔබට
+    - සුබ උදෑසනක්
+    - සුබ සන්ධ්යාවක්
+    - හලෝ
+    - සුභ සන්ධ්යාවක්
+- intent: goodbye_sn
+  examples: |
+    - සුබ ගමන්
+    - පසුව නැවත හමුවෙමු
+    - සුබ රාත්රියක්
+    - යනවා
+    - සුබ දවසක් වේවා
+    - නැවත හමුවෙමු
+    - ගිහින් එන්නම්
+- intent: thanks_sn
+  examples: |
+    - ඔයාට ස්තුතියි
+    - ගොඩක් ස්තුතියි
+    - මම එය අගය කරනවා
+    - ස්තුතියි ඔයාගේ උදව්වට
+- intent: ask_investment_advice_sn
+  examples: |
+    - සමහර හොඳ ආයෝජන විකල්ප මොනවාද?
+    - ඔබට ආයෝජන කිහිපයක් නිර්දේශ කළ හැකිද?
+    - මගේ මුදල් ආයෝජනය කළ යුත්තේ කොතැනින්ද?
+    - මම කොහොමද මගේ ධනය වර්ධනය කරන්නේ?
+- intent: ask_risk_tolerance_sn
+  examples: |
+    - මගේ අවදානම් ඉවසීම කුමක්ද?
+    - මට කොච්චර අවදානමක් ගන්න පුළුවන්ද?
+    - මගේ අවදානම් ඉවසීම තීරණය කළ යුත්තේ කෙසේද?
+    - මගේ අවදානම් ඉවසීම තක්සේරු කිරීමට ඔබට මට උදව් කළ හැකිද?
+- intent: ask_asset_allocation_sn
+  examples: |
+    - මම මගේ වත්කම් වෙන් කළ යුත්තේ කෙසේද?
+    - කදිම වත්කම් වෙන් කිරීම යනු කුමක්ද?
+    - වත්කම් වෙන් කිරීම ගැන මට පැහැදිලි කරන්න පුළුවන්ද?
+    - මගේ ආයෝජන කළඹ සමතුලිත කරන්නේ කෙසේද?
+- intent: ask_retirement_planning_sn
+  examples: |
+    - විශ්රාම ගැනීම සඳහා මට කොපමණ මුදලක් ඉතිරි කර ගත යුතුද?
+    - මට හොඳම විශ්රාම සැලැස්ම කුමක්ද?
+    - විශ්රාම සැලසුම් කරන්න මට උදව් කරන්න පුළුවන්ද?
+    - විශ්රාම ගැනීම සඳහා සැලසුම් කිරීම ආරම්භ කළ යුත්තේ කෙසේද?
+- intent: ask_financial_terms_sn
+  examples: |
+    - සංයුක්ත පොලී යනු කුමක්ද?
+    - විවිධාංගීකරණය මට පැහැදිලි කරන්න.
+    - අන්යෝන්ය අරමුදල යනු කුමක්ද?
+    - ඔබට ROI නිර්වචනය කළ හැකිද?
+- intent: clarify_investment_sn
+  examples: |
+    - ඔබට කොටස් ගැන වැඩි විස්තර ලබා දිය හැකිද?
+    - දේපල වෙළඳාම් ආයෝජන ගැන කියන්න.
+    - මම බැඳුම්කර ගැන උනන්දුයි. ඔබට ඒවා පැහැදිලි කළ හැකිද?
+    - cryptocurrencies ආයෝජනය කිරීමේ අවදානම් මොනවාද?
+- intent: other_sn
+  examples: |
+    - බදු සැලසුම් කිරීම සඳහා ඔබට මට උදව් කළ හැකිද?
+    - මම මූල්ය උපදේශකයෙකු තෝරා ගන්නේ කෙසේද?
+    - සමහර පොදු ආයෝජන වැරදි මොනවාද?
+    - කොටස් වෙළඳපොලේ ආයෝජනය කිරීමට මෙය හොඳ කාලයක්ද?
+- intent: out_of_scope_sn
+  examples: |
+    - මට කෑම ඕඩර් කරන්න ඕනේ
+    - 2 + 2 යනු කුමක්ද?
+    - ඇමරිකාවේ ජනාධිපති කවුද?

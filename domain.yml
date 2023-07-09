@@ -1,16 +1,25 @@
 version: '3.1'
 intents:
 - ask_asset_allocation
+- ask_asset_allocation_sn
 - ask_financial_terms
+- ask_financial_terms_sn
 - ask_investment_advice
+- ask_investment_advice_sn
 - ask_retirement_planning
+- ask_retirement_planning_sn
 - ask_risk_tolerance
+- ask_risk_tolerance_sn
 - clarify_investment
+- clarify_investment_sn
 - goodbye
+- goodbye_sn
 - greet
+- greet_sn
 - other
+- other_sn
 - thanks
-
+- thanks_sn
 responses:
   utter_greet:
   - text: Hello! How can I assist you with your investment and financial decisions?
@@ -42,19 +51,36 @@ responses:
   utter_other:
   - text: I'm sorry, I specialize in investment and financial decision making. If you have any questions in that domain, feel free to ask.
   utter_out_of_scope:
-    - text: Sorry, I can't handle that request.
-  utter_please_rephrase:
-    - text: I'm sorry, I didn't quite understand that. Could you rephrase?
-  utter_default:
-    - text: Sorry I didn't get that. Can you rephrase?
-
+  - text: Sorry, I can't handle that request.
+  utter_fallback:
+  - text: I'm sorry, I specialize in investment and financial decision making. If you have any questions in that domain, feel free to ask.
+  utter_greet_sn:
+  - text: ආයුබෝවන්! ඔබේ ආයෝජන සහ මූල්ය තීරණ සඳහා මා ඔබට සහාය වන්නේ කෙසේද?
+  utter_goodbye_sn:
+  - text: ආයුබෝවන්! ඔබට තවත් ප්රශ්න ඇත්නම්, අසන්න.
+  utter_thanks_sn:
+  - text: ඔබට තවත් උපකාර අවශ්ය නම්, මම ඔබට උදව් කිරීමට කැමතියි.
+  utter_ask_investment_advice_sn:
+  - text: අනිවරයෙන්, ඔබට හොඳම ආයෝජන උපදෙස් ලබා දීම සඳහා, කරුණාකර ඔබේ ආයෝජන ඉලක්ක මට දන්වන්න පුළුවන්ද?
+  utter_ask_risk_tolerance_sn:
+  - text: ඔබේ අවදානම් ඉවසීම තීරණය කිරීම ආයෝජන තීරණ සඳහා ඉතා වැදගත් වේ. ඉහළ ප්රතිලාභ සඳහා වැඩි අවදානමකකට යෑමට ඔබ කැමතිද නැතහොත් වඩා ස්ථාවර ආයෝජන සමඟ අඩු අවදානම් වලට ඔබ කැමතිද?
+  utter_ask_asset_allocation_sn:
+  - text: වත්කම් වෙන් කිරීම ඔබේ ආයෝජන සමතුලිත කිරීමට උපකාරී වේ. කොටස්, බැඳුම්කර සහ නිශ්චල දේපල වැනි විවිධ වත්කම් පන්ති අතර ඔබේ ආයෝජන බෙදා හැරීම එයට ඇතුළත් වේ. ඔබ ඔබේ වත්කම් වෙන් කිරීමට කැමති කෙසේද?
+  utter_ask_retirement_planning_sn:
+  - text: විශ්රාම ගැනීම සඳහා සැලසුම් කිරීම වැදගත් වේ. ඔබට සහාය වීමට, කරුණාකර ඔබ කැමති විශ්රාම වයස සහ විශ්රාම ගැනීමෙන් පසු ඔබ පවත්වාගෙන යාමට කැමති ජීවන රටාව මට දන්වන්න පුළුවන්ද?
+  utter_ask_financial_terms_sn:
+  - text: |-
+      ඔබට ප්රයෝජනවත් විය හැකි මුල්ය කොන්දේසි කිහිපයක් මෙන්න:
+      - සංයුක්ත පොළිය: තැන්පතුවක හෝ ණයක මූලික මූලික සහ සමුච්චිත පොලිය මත ගණනය කරන ලද පොලී.
+       - විවිධාංගීකරණය: අවදානම අවම කිරීම සඳහා විවිධ වත්කම් හරහා ආයෝජන ව්යාප්ත කිරීම.
+       -  අන්යෝන්ය අරමුදල: විවිධාංගීකරණය වූ කළඹක ආයෝජනය කිරීමට බහු ආයෝජකයින්ගෙන් මුදල් එකතු කරන ආයෝජන වාහනයකි.
+       - ROI (ආයෝජන මත ප්රතිලාභ): සාමාන්යයෙන් ප්රතිශතයක් ලෙස ප්රකාශිත ආයෝජනයක ලාභදායිතාවයේ මිනුමක්.
+  utter_clarify_investment_sn:
+  - text: |-
+      නිසැකවම! ඔබේ නිශ්චිත ආයෝජනය පිළිබඳ තොරතුරු කිහිපයක් මෙන්න:
+      [https://www.nerdwallet.com/article/investing/the-best-investments-right-now]
+  utter_other_sn:
+  - text: මට සමාවෙන්න, මම ආයෝජන සහ මූල්ය තීරණ ගැනීම සම්බන්ධයෙන් විශේෂඥයෙක්. ඔබට එම වසම තුළ කිසියම් ප්රශ්නයක් ඇත්නම්, අසන්න.
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
-actions:
-- utter_ask_risk_tolerance
-- utter_ask_investment_advice
-- utter_thanks
-- utter_greet
-- utter_fallback
-- action_default_fallback

@@ -6,25 +6,48 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
 
-- story: sad path 1
+- story: happy path sinhala
+  steps:
+  - intent: greet_sn
+  - action: utter_greet_sn
+
+- story: interactive_story_1
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - intent: ask_investment_advice
+  - action: utter_ask_financial_terms
+  - intent: clarify_investment
+  - action: utter_clarify_investment
+  - intent: thanks
+  - action: utter_thanks
 
-- story: sad path 2
+- story: interactive_story_1_sn
+  steps:
+  - intent: greet_sn
+  - action: utter_greet_sn
+  - intent: ask_investment_advice_sn
+  - action: utter_ask_financial_terms_sn
+  - intent: clarify_investment_sn
+  - action: utter_clarify_investment_sn
+  - intent: thanks_sn
+  - action: utter_thanks_sn
+
+- story: interactive_story_2
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+  - intent: clarify_investment
+  - action: utter_clarify_investment
+  - intent: thanks
+  - action: utter_thanks
+
+- story: interactive_story_2_sn
+  steps:
+  - intent: greet_sn
+  - action: utter_greet_sn
+  - intent: clarify_investment_sn
+  - action: utter_clarify_investment_sn
+  - intent: thanks_sn
+  - action: utter_thanks_sn
