@@ -1,5 +1,4 @@
 version: "3.1"
-
 nlu:
 - intent: greet
   examples: |
@@ -16,7 +15,9 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
-
+- intent: greet_sinhala
+  examples: |
+    - හෙලෝ
 - intent: goodbye
   examples: |
     - cu
@@ -29,63 +30,56 @@ nlu:
     - see you around
     - bye bye
     - see you later
-
-- intent: affirm
+- intent: thanks
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
-
-- intent: deny
+    - Thank you
+    - Thanks a lot
+    - I appreciate it
+    - Thanks for your help
+- intent: ask_investment_advice
   examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
-
-- intent: mood_great
+    - What are some good investment options?
+    - Can you recommend some investments?
+    - Where should I invest my money?
+    - How can I grow my wealth?
+- intent: ask_risk_tolerance
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-
-- intent: mood_unhappy
+    - What is my risk tolerance?
+    - How much risk can I afford to take?
+    - How should I determine my risk tolerance?
+    - Can you help me assess my risk tolerance?
+- intent: ask_asset_allocation
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-
-- intent: bot_challenge
+    - How should I allocate my assets?
+    - What is the ideal asset allocation?
+    - Can you explain asset allocation to me?
+    - How do I balance my investment portfolio?
+- intent: ask_retirement_planning
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - How much do I need to save for retirement?
+    - What is the best retirement plan for me?
+    - Can you help me with retirement planning?
+    - How should I start planning for retirement?
+- intent: ask_financial_terms
+  examples: |
+    - What is compound interest?
+    - Explain diversification to me.
+    - What is a mutual fund?
+    - Can you define ROI?
+- intent: clarify_investment
+  examples: |
+    - Can you provide more information about stocks?
+    - Tell me about real estate investments.
+    - I'm interested in bonds. Can you explain them?
+    - What are the risks of investing in cryptocurrencies?
+- intent: other
+  examples: |
+    - Can you help me with tax planning?
+    - How do I choose a financial advisor?
+    - What are some common investment mistakes?
+    - Is it a good time to invest in the stock market?
+- intent: out_of_scope
+  examples: |
+    - I want to order food
+    - What is 2 + 2?
+    - Who's the US President?

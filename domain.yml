@@ -1,35 +1,60 @@
-version: "3.1"
-
+version: '3.1'
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+- ask_asset_allocation
+- ask_financial_terms
+- ask_investment_advice
+- ask_retirement_planning
+- ask_risk_tolerance
+- clarify_investment
+- goodbye
+- greet
+- other
+- thanks
 
 responses:
   utter_greet:
-  - text: "Hey! How are you doing?"
-  - text: "Whatssap"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
+  - text: Hello! How can I assist you with your investment and financial decisions?
   utter_goodbye:
-  - text: "Bye"
+  - text: Goodbye! If you have more questions in the future, feel free to ask.
+  utter_thanks:
+  - text: You're welcome! If you need any further assistance, feel free to ask.
+  utter_ask_investment_advice:
+  - text: Sure! To provide you with the best investment advice, could you please let me know your investment goals and risk tolerance?
+  utter_ask_risk_tolerance:
+  - text: Determining your risk tolerance is crucial for investment decisions. Are you comfortable with higher risk for potentially higher returns or do you prefer lower risk with more stable investments?
+  utter_ask_asset_allocation:
+  - text: Asset allocation helps in balancing your investment portfolio. It involves distributing your investments among different asset classes like stocks, bonds, and real estate. How would you like to allocate your assets?
+  utter_ask_retirement_planning:
+  - text: Planning for retirement is important. To assist you, could you please let me know your desired retirement age and the lifestyle you would like to maintain after retirement?
+  utter_ask_financial_terms:
+  - text: |-
+      Sure! Here are some financial terms you may find helpful:
 
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+      - Compound Interest: Interest calculated on the initial principal and accumulated interest of a deposit or loan.
+      - Diversification: Spreading investments across different assets to reduce risk.
+      - Mutual Fund: An investment vehicle that pools money from multiple investors to invest in a diversified portfolio.
+      - ROI (Return on Investment): A measure of the profitability of an investment, usually expressed as a percentage.
+  utter_clarify_investment:
+  - text: |-
+      Certainly! Here is some information on your specified investment:
+
+      [https://www.nerdwallet.com/article/investing/the-best-investments-right-now]
+  utter_other:
+  - text: I'm sorry, I specialize in investment and financial decision making. If you have any questions in that domain, feel free to ask.
+  utter_out_of_scope:
+    - text: Sorry, I can't handle that request.
+  utter_please_rephrase:
+    - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+  utter_default:
+    - text: Sorry I didn't get that. Can you rephrase?
 
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+actions:
+- utter_ask_risk_tolerance
+- utter_ask_investment_advice
+- utter_thanks
+- utter_greet
+- utter_fallback
+- action_default_fallback
